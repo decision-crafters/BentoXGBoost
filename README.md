@@ -13,7 +13,8 @@ git clone https://github.com/bentoml/BentoXGBoost.git
 cd BentoXGBoost
 
 # Recommend Python 3.11
-pip install -r requirements.txt
+# Install BentoML and the required dependencies for the project
+pip install bentoml xgboost scikit-learn
 ```
 
 ## Train and save a model
@@ -86,7 +87,7 @@ For detailed explanations, see [the BentoML documentation](https://docs.bentoml.
 
 After the Service is ready, you can deploy the application to BentoCloud for better management and scalability. [Sign up](https://www.bentoml.com/) if you haven't got a BentoCloud account.
 
-Make sure you have [logged in to BentoCloud](https://docs.bentoml.com/en/latest/bentocloud/how-tos/manage-access-token.html).
+Make sure you have [logged in to BentoCloud](https://docs.bentoml.com/en/latest/scale-with-bentocloud/manage-api-tokens.html).
 
 ```bash
 bentoml cloud login

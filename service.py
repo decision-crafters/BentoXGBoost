@@ -5,14 +5,18 @@ import xgboost as xgb
 
 import bentoml
 
+demo_image = bentoml.images.PythonImage(python_version="3.11") \
+    .python_packages("xgboost", "scikit-learn")
+
 
 @bentoml.service(
+    image=demo_image,
     resources={"cpu": "2"},
     traffic={"timeout": 10},
 )
 class CancerClassifier:
     # Retrieve the latest version of the model from the BentoML model store
-    bento_model = bentoml.models.get("cancer:latest")
+    bento_model = bentoml.models.BentoModel("cancer:latest")
 
     def __init__(self):
         self.model = bentoml.xgboost.load_model(self.bento_model)
