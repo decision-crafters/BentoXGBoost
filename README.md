@@ -1,17 +1,33 @@
 <div align="center">
-    <h1 align="center">Serve an XGBoost Model with BentoML</h1>
+    <h1 align="center">Enhanced XGBoost Model Serving with BentoML</h1>
 </div>
 
-This is a BentoML example project, which demonstrates how to serve and deploy an [XGBoost](https://xgboost.readthedocs.io/en/stable/) model with BentoML.
+This is an enhanced fork of the original BentoML XGBoost example project, which demonstrates how to serve and deploy an [XGBoost](https://xgboost.readthedocs.io/en/stable/) model with BentoML. This enhanced version includes additional features such as:
 
-See [here](https://docs.bentoml.com/en/latest/examples/overview.html) for a full list of BentoML example projects.
+- **Multiple data sources**: Train models using GitHub repositories, web pages, or crawled websites
+- **Project configuration system**: Manage different projects with their own model names, data sources, and parameters
+- **Enhanced API**: Switch between models, train new models, and manage projects via API
+- **Makefile support**: Simplified setup and execution with Python 3.11 virtual environments
+- **AI assistant prompts**: Example prompts for interacting with the project using AI coding assistants
+
+The original BentoML example can be found [here](https://docs.bentoml.com/en/latest/examples/overview.html).
 
 ## Installation
 
-Clone the repository and navigate to the project directory:
+This project is a fork of the original BentoML XGBoost example with additional features. To get started, fork this repository and then clone your fork:
 
 ```bash
-git clone https://github.com/bentoml/BentoXGBoost.git
+# Fork the repository first at https://github.com/decision-crafters/BentoXGBoost
+
+# Then clone your fork
+git clone https://github.com/YOUR-USERNAME/BentoXGBoost.git
+cd BentoXGBoost
+```
+
+Alternatively, you can clone directly from the decision-crafters repository:
+
+```bash
+git clone https://github.com/decision-crafters/BentoXGBoost.git
 cd BentoXGBoost
 ```
 
@@ -376,3 +392,16 @@ bentoml deploy .
 Once the application is up and running, you can access it via the exposed URL.
 
 **Note**: For custom deployment in your own infrastructure, use [BentoML to generate an OCI-compliant image](https://docs.bentoml.com/en/latest/get-started/packaging-for-deployment.html).
+
+## Contributing
+
+Contributions to this enhanced BentoXGBoost project are welcome! This project is maintained by [decision-crafters](https://github.com/decision-crafters) and is a fork of the original [BentoML XGBoost example](https://github.com/bentoml/BentoXGBoost).
+
+To contribute:
+
+1. Fork the repository at https://github.com/decision-crafters/BentoXGBoost
+2. Create a new branch for your feature or bugfix
+3. Make your changes
+4. Submit a pull request
+
+You can also use the `prompts/contributing.md` file as a template when working with AI coding assistants to help with your contribution.
